@@ -13,7 +13,7 @@ public class AccountDAL {
     static ResultSet resultset=null;
     public static ResultSet Login(String UserName, String Password) {
         con = dbUtils.getMyConnection();
-        String sql="SELECT * FROM `taikhoan` WHERE  UserName=? and Password=?";
+        String sql="SELECT * FROM `dangnhap` WHERE  UserName=? and Password=?";
         try{
             preparedStatement=con.prepareStatement(sql);
             preparedStatement.setString(1,UserName);
